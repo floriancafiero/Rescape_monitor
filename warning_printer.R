@@ -6,13 +6,11 @@ source("path/to/n-grams.R")
 significant_differences <- 0
 
 # Check for significant difference in sentence lengths
-# Assuming 't_test_result' is the result of the t-test from 'sentence_length.R'
 if (t_test_result$p.value < 0.05) {
   significant_differences <- significant_differences + 1
 }
 
 # Check for significant difference in n-gram distribution
-# Assuming 'chi_squared_test' is the result of the Chi-squared test from 'n-grams.R'
 if (chi_squared_test$p.value < 0.05) {
   significant_differences <- significant_differences + 1
 }
